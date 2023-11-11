@@ -1,8 +1,6 @@
 function sum(a, b) {
   if (Array.isArray(a)) {
-    let sum = 0
-    a.forEach((i) => (sum += i))
-    return sum
+    return a.reduce((acc, n) => acc + n, 0)
   } else if (typeof a === 'number' && typeof b === 'number') {
     return a + b
   }
